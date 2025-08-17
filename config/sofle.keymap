@@ -27,6 +27,15 @@
         };
     };
 
+    behaviors {
+        td_q: td_q {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_Q";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp ESC>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -42,7 +51,7 @@
 
             bindings = <
 &kp ESC        &kp N1  &kp N2            &kp N3    &kp N4            &kp N5                              &kp N6     &kp N7         &kp N8            &kp N9    &kp N0    &kp BACKSPACE
-&kp LC(GRAVE)  &kp Q   &kp W             &kp E     &kp R             &kp T                               &kp Y      &kp U          &kp I             &kp O     &kp P     &kp BACKSLASH
+&kp LC(GRAVE)  &td_q   &kp W             &kp E     &kp R             &kp T                               &kp Y      &kp U          &kp I             &kp O     &kp P     &kp BACKSLASH
 &kp TAB        &kp A   &kp S             &kp D     &kp F             &kp G                               &kp H      &kp J          &kp K             &kp L     &kp SEMI  &kp SQT
 &kp LSHFT      &kp Z   &kp X             &kp C     &kp V             &kp B      &kp C_MUTE    &kp ENTER  &kp N      &kp M          &kp COMMA         &kp DOT   &kp FSLH  &kp RSHFT
                        &kp LEFT_CONTROL  &kp LALT  &kp LEFT_COMMAND  &mo LOWER  &kp SPACE     &kp ENTER  &mo RAISE  &kp RIGHT_ALT  &kp LEFT_BRACKET  &kp RBKT
