@@ -107,7 +107,7 @@
         bhm_p_rght_brckt: bhm_p_rght_brckt {
             compatible = "zmk,behavior-mod-morph";
             label = "BHM_P_RGHT_BRCKT";
-            bindings = <&kp P>, <&kp LS(RIGHT_BRACKET)>;
+            bindings = <&kp P>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
