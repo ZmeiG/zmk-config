@@ -83,6 +83,15 @@
             #binding-cells = <0>;
             bindings = <&kp SEMI>, <&kp SQT>;
         };
+
+        bhm_smcln_apos: bhm_smcln_apos {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BHM_SMCLN_APOS";
+            bindings = <&kp SEMI>, <&kp APOS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -108,11 +117,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC        &kp N1             &kp N2               &kp N3           &kp N4            &kp N5                           &kp N6  &kp N7    &kp N8            &kp N9           &kp N0            &kp BACKSPACE
-&kp LC(GRAVE)  &td_q_esc          &kp W                &kp E            &kp R             &kp T                            &kp Y   &kp U     &kp I             &td_o_lft_brckt  &td_p_rght_brckt  &kp BACKSLASH
-&kp TAB        &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LGUI F       &kp G                            &kp H   &kp J     &kp K             &kp L            &td_smcln_apst    &kp SQT
-&kp LSHFT      &kp Z              &kp X                &kp C            &kp V             &kp B   &kp C_MUTE    &kp ENTER  &kp N   &kp M     &kp COMMA         &kp DOT          &kp FSLH          &kp RSHFT
-                                  &kp LEFT_CONTROL     &kp LALT         &kp LEFT_COMMAND  &mo 1   &kp SPACE     &kp ENTER  &mo 3   &kp RGUI  &kp LEFT_BRACKET  &kp RBKT
+&none  &none              &none                &none            &none             &none                           &none  &none     &none        &none                 &none             &none
+&none  &td_q_esc          &kp W                &kp E            &kp R             &kp T                           &kp Y  &kp U     &kp I        &td_o_lft_brckt       &td_p_rght_brckt  &none
+&none  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LGUI F       &kp G                           &kp H  &kp J     &hmr RALT K  &hmr RIGHT_CONTROL L  &bhm_smcln_apos   &none
+&none  &kp Z              &kp X                &kp C            &kp V             &kp B  &kp C_MUTE    &kp ENTER  &kp N  &kp M     &kp COMMA    &kp DOT               &kp FSLH          &none
+                          &none                &none            &kp LEFT_COMMAND  &mo 1  &kp SPACE     &kp ENTER  &mo 3  &kp RGUI  &none        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -166,11 +175,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&none   &none         &none         &none               &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans    &trans    &trans     &trans   &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_CLR                      &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
-&trans  &none         &none         &kp K_CONTEXT_MENU  &trans        &none                           &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
-&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY          &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans    &trans     &trans   &trans
-                      &trans        &trans              &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
+&none   &none         &none         &none               &none         &none                         &trans     &trans    &trans    &trans     &trans    &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_CLR                    &kp PG_UP  &trans    &kp UP    &kp DEL    &kp BSPC  &trans
+&trans  &none         &none         &kp K_CONTEXT_MENU  &trans        &none                         &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &none     &none
+&trans  &kp K_UNDO    &kp K_CUT     &kp K_COPY          &kp K_PASTE   &trans      &trans    &trans  &trans     &trans    &trans    &trans     &trans    &trans
+                      &trans        &trans              &trans        &trans      &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
