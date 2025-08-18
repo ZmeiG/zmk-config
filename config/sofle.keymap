@@ -94,6 +94,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
+
+        bhm_o_lf_brckt: bhm_o_lf_brckt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BHM_O_LF_BRCKT";
+            bindings = <&kp O>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        bhm_p_rght_brckt: bhm_p_rght_brckt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BHM_P_RGHT_BRCKT";
+            bindings = <&kp P>, <&kp LS(RIGHT_BRACKET)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -120,7 +138,7 @@
 
             bindings = <
 &none  &none              &none                &none            &none             &none                                &none            &none             &none        &none                 &none                 &none
-&none  &kp Q              &kp W                &kp E            &kp R             &kp T                                &kp Y            &kp U             &kp I        &td_o_lft_brckt       &td_p_rght_brckt      &none
+&none  &kp Q              &kp W                &kp E            &kp R             &kp T                                &kp Y            &kp U             &kp I        &bhm_o_lf_brckt       &bhm_p_rght_brckt     &none
 &none  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LGUI F       &kp G                                &kp H            &hmr RIGHT_GUI J  &hmr RALT K  &hmr RIGHT_CONTROL L  &bhm_smcln_apos       &none
 &none  &kp Z              &kp X                &kp C            &kp V             &kp B      &kp C_MUTE     &kp ENTER  &kp N            &kp M             &kp COMMA    &kp DOT               &bhm_fwdslsh_bckslsh  &none
                           &none                &none            &mt LEFT_GUI TAB  &lt 1 ESC  &lt 2 SPACE    &kp ENTER  &lt 3 BACKSPACE  &mt RGUI DEL      &none        &none
