@@ -26,20 +26,6 @@
     };
 
     behaviors {
-        td_o_lft_brckt: td_o_lft_brckt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_O_LFT_BRCKT";
-            #binding-cells = <0>;
-            bindings = <&kp O>, <&kp LEFT_BRACKET>;
-        };
-
-        td_p_rght_brckt: td_p_rght_brckt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_P_RGHT_BRCKT";
-            #binding-cells = <0>;
-            bindings = <&kp P>, <&kp RIGHT_BRACKET>;
-        };
-
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -68,22 +54,13 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42 50 51 52 53 54>;
         };
 
-        bhm_smcln_apos: bhm_smcln_apos {
+        bhm_dot_apos: bhm_dot_apos {
             compatible = "zmk,behavior-mod-morph";
-            label = "BHM_SMCLN_APOS";
-            bindings = <&kp SEMI>, <&kp APOS>;
+            label = "BHM_DOT_APOS";
+            bindings = <&kp DOT>, <&kp APOS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
-        };
-
-        bhm_q_esc: bhm_q_esc {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BHM_Q_ESC";
-            bindings = <&kp Q>, <&kp ESC>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
         };
 
         bhm_fwdslsh_bckslsh: bhm_fwdslsh_bckslsh {
@@ -98,7 +75,7 @@
         bhm_o_lf_brckt: bhm_o_lf_brckt {
             compatible = "zmk,behavior-mod-morph";
             label = "BHM_O_LF_BRCKT";
-            bindings = <&kp O>, <&kp LEFT_BRACKET>;
+            bindings = <&kp O>, <&kp LBKT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -107,7 +84,7 @@
         bhm_p_rght_brckt: bhm_p_rght_brckt {
             compatible = "zmk,behavior-mod-morph";
             label = "BHM_P_RGHT_BRCKT";
-            bindings = <&kp P>, <&kp RIGHT_BRACKET>;
+            bindings = <&kp P>, <&kp RBKT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -137,10 +114,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&none  &none              &none                &none            &none             &none                                &none            &none             &none        &none                 &none                 &none
-&none  &kp Q              &kp W                &kp E            &kp R             &kp T                                &kp Y            &kp U             &kp I        &bhm_o_lf_brckt       &bhm_p_rght_brckt     &none
-&none  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LGUI F       &kp G                                &kp H            &hmr RIGHT_GUI J  &hmr RALT K  &hmr RIGHT_CONTROL L  &bhm_smcln_apos       &none
-&none  &kp Z              &kp X                &kp C            &kp V             &kp B      &kp C_MUTE     &kp ENTER  &kp N            &kp M             &kp COMMA    &kp DOT               &bhm_fwdslsh_bckslsh  &none
+&none  &none              &none                &none            &none             &none                                &none            &none             &none        &none                 &none                  &none
+&none  &kp Q              &kp W                &kp E            &kp R             &kp T                                &kp Y            &kp U             &kp I        &bhm_o_lf_brckt       &bhm_p_rght_brckt      &none
+&none  &hml LEFT_SHIFT A  &hml LEFT_CONTROL S  &hml LEFT_ALT D  &hml LGUI F       &kp G                                &kp H            &hmr RIGHT_GUI J  &hmr RALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMI  &none
+&none  &kp Z              &kp X                &kp C            &kp V             &kp B      &kp C_MUTE     &kp ENTER  &kp N            &kp M             &kp COMMA    &bhm_dot_apos         &bhm_fwdslsh_bckslsh   &none
                           &none                &none            &mt LEFT_GUI TAB  &lt 1 ESC  &lt 2 SPACE    &kp ENTER  &lt 3 BACKSPACE  &mt RGUI DEL      &none        &none
             >;
 
