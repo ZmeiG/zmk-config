@@ -31,7 +31,7 @@
         compatible = "zmk,combos";
 
         ru_en {
-            bindings = <&kp SPACE>;
+            bindings = <&kp LA(LC(SPACE))>;
             key-positions = <37 38>;
         };
     };
