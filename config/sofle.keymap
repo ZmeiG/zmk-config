@@ -27,14 +27,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        ru_en {
-            bindings = <&kp LA(LC(SPACE))>;
-            key-positions = <50 51>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
