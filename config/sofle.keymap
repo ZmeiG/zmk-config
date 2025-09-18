@@ -32,7 +32,7 @@
 
         ru_en {
             bindings = <&kp LA(LC(SPACE))>;
-            key-positions = <37 38>;
+            key-positions = <50 51>;
         };
     };
 
