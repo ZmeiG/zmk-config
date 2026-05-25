@@ -106,7 +106,7 @@
 
             bindings = <
 &none           &none  &none  &none             &none         &none                                     &none  &none                       &none              &none                 &none                  &none
-&kp ESC         &kp Q  &kp W  &kp E             &kp R         &kp T                                     &kp Y  &kp U                       &kp I              &kp O                 &kp P                  &bh_bcksp_del
+&kp ESCAPE      &kp Q  &kp W  &kp E             &kp R         &kp T                                     &kp Y  &kp U                       &kp I              &kp O                 &kp P                  &bh_bcksp_del
 &kp TAB         &kp A  &kp S  &kp D             &kp F         &kp G                                     &kp H  &hmr RIGHT_GUI J            &hmr RALT K        &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMI  &kp SQT
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V         &kp B         &kp C_MUTE     &kp ENTER    &kp N  &kp M                       &kp COMMA          &kp DOT               &kp SLASH              &kp BACKSLASH
                        &none  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 1 SPACE    &lt 3 ENTER  &mo 2  &mt RIGHT_ALT LEFT_BRACKET  &kp RIGHT_BRACKET  &none
